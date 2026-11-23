@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-brand-bg-primary: var(--bg-primary);
+  --color-brand-bg-secondary: var(--bg-secondary);
+  --color-brand-card: var(--card);
+  
+  --color-brand-accent-primary: var(--accent-primary);
+  --color-brand-accent-secondary: var(--accent-secondary);
+  
+  --color-brand-text-primary: var(--text-primary);
+  --color-brand-text-secondary: var(--text-secondary);
+  
+  --color-brand-border: var(--border);
+  
+  --color-brand-success: var(--success);
+  --color-brand-danger: var(--danger);
+  --color-brand-highlight: var(--highlight);
+  
+  --font-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+  
+  --radius-app: 16px;
+}
+
+@layer base {
+  :root {
+    --bg-primary: #F8FAFC;
+    --bg-secondary: #F1F5F9;
+    --card: #FFFFFF;
+    
+    --accent-primary: #0D9488;
+    --accent-secondary: #0284C7;
+    
+    --text-primary: #0F172A;
+    --text-secondary: #475569;
+    
+    --border: #E2E8F0;
+    
+    --success: #16A34A;
+    --danger: #DC2626;
+    --highlight: #D97706;
+
+    font-family: theme('fontFamily.sans');
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .dark {
+    --bg-primary: #07111F;
+    --bg-secondary: #0D1B2A;
+    --card: #13263A;
+    
+    --accent-primary: #19D3AE;
+    --accent-secondary: #38BDF8;
+    
+    --text-primary: #F1F5F9;
+    --text-secondary: #94A3B8;
+    
+    --border: #1E3A5F;
+    
+    --success: #10B981;
+    --danger: #F43F5E;
+    --highlight: #FBBF24;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background-color: theme('colors.brand.card');
+    border: 1px solid theme('colors.brand.border');
+    border-radius: theme('borderRadius.app');
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: background-color 0.4s ease, border-color 0.4s ease, box-shadow 0.3s ease;
+  }
+  
+  .text-gradient {
+    background: linear-gradient(to right, theme('colors.brand.accent.secondary'), theme('colors.brand.accent.primary'));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+html, body {
+  background-color: theme('colors.brand.bg.primary');
+  color: theme('colors.brand.text.primary');
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: theme('colors.brand.bg.primary');
+}
+::-webkit-scrollbar-thumb {
+  background: theme('colors.brand.border');
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: theme('colors.brand.text.secondary');
+}
