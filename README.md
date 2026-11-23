@@ -1,139 +1,139 @@
 # SkillForge AI
 
-> **Student Skill Mapping and Recruitment Platform for Academic-Industry Alignment**  
-> *A unified, multi-role web platform designed to bridge the gap between collegiate academic preparation and corporate recruitment standards through verified portfolio evidence and low-latency GenAI intelligence.*
+**Student Skill Mapping and Recruitment Platform for Academic-Industry Alignment**
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-skillforge--ai--five.vercel.app-brightgreen?style=for-the-badge&logo=vercel)](https://skillforge-ai-five.vercel.app)
-[![React](https://img.shields.io/badge/React-19.0-61DAFB?style=for-the-badge&logo=react)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
-[![Vite](https://img.shields.io/badge/Vite-5.0-646CFF?style=for-the-badge&logo=vite)](https://vitejs.dev/)
-[![Supabase](https://img.shields.io/badge/Supabase-PostgreSQL-3ECF8E?style=for-the-badge&logo=supabase)](https://supabase.com/)
-[![Groq](https://img.shields.io/badge/Groq-LPU%20Inference-F05032?style=for-the-badge)](https://groq.com/)
+SkillForge AI is an integrated, multi-role web platform designed to bridge the gap between academic curricula and industry recruitment standards. It enables students to build verified technical portfolios, diagnose skill gaps against real industry roles, generate AI-driven learning roadmaps, and produce ATS-compliant resumes. It also empowers faculty with cohort-level placement intelligence and provides corporate recruiters with verified candidate search and AI-assisted candidate comparison.
+
+**Live Application:** https://skillforge-ai-five.vercel.app
 
 ---
 
-## 📌 Project Overview
+## The Problem
 
-In conventional higher education ecosystems, student competencies are evaluated strictly through cumulative grade point averages (CGPA) and formal examination marks. These aggregate figures fail to reflect granular technical micro-skills, real-world project development, code repositories, and industry certifications. 
+Traditional academic transcripts evaluate students solely through high-level grades and Cumulative Grade Point Averages (CGPA). These aggregate scores fail to capture practical micro-skills, real-world development projects, and technical certifications. As a result:
 
-**SkillForge AI** solves this information asymmetry by bringing **Students**, **Faculty Mentors**, and **Corporate Recruiters** into a single interconnected, role-governed platform:
-* **Students** audit their current technical proficiencies against target market roles, receive diagnostic gap scores, and follow structured 4-phase learning roadmaps.
-* **Faculty** track departmental skill distributions, monitor cohort readiness, and spot at-risk students before placement drives.
-* **Recruiters** search verified candidate profiles, filter by exact technical proficiencies, and run side-by-side comparative evaluations powered by AI verdicts.
+1. **Students** lack objective guidance on what specific competencies they are missing for their target career roles.
+2. **Faculty** have no centralized, real-time visibility into technical skill distributions across graduating batches to spot at-risk students before campus placements.
+3. **Recruiters** spend hours manually screening unverified resumes with no standardized proof of competence.
 
 ---
 
-## 🚀 Key Features
+## Platform Modules
 
-### 🎓 1. Student Module
-* **Verified Skill Catalog:** Track proficiency (0–100%) across frontend, backend, AI/ML, cloud, and core CS skills. Link projects and credentials to earn objective **VERIFIED** badges.
-* **AI Skill Gap Diagnostics:** Select target industry roles (e.g., *Full-Stack Developer*, *AI Engineer*, *Cloud DevOps*) to instantly calculate skill alignment percentages and missing competencies.
-* **4-Phase Learning Roadmaps:** Automated curriculum generator decomposing skill deficits into:
+### 1. Student Portal
+* **Verified Skill Tracking:** Catalog skills across categories (Frontend, Backend, AI/ML, Cloud, Databases) with proficiency ratings (0–100%). Skills backed by project repositories receive a **VERIFIED** badge.
+* **AI Skill Gap Analysis:** Select an industry target role (e.g., *Full-Stack Developer*, *AI Engineer*, *Cloud DevOps*) to evaluate existing skills against role requirements and calculate the exact gap.
+* **4-Phase Learning Roadmap:** Automatically generates a structured, stage-wise learning plan:
   * **Phase 1:** Core Foundations
   * **Phase 2:** Framework Mastery
   * **Phase 3:** Systems Integration
-  * **Phase 4:** Capstone Project Realization
-* **ATS-Compliant Resume Builder:** Compile verified technical skills, project links, and educational credentials directly into standardized, single-click downloadable PDF resumes.
+  * **Phase 4:** Capstone Project Execution
+* **ATS Resume Builder:** Generates a standardized, clean, single-column ATS-friendly resume from verified portfolio data.
 
-### 🏫 2. Faculty Module
-* **Departmental Skill Analytics:** Live macro-level visibility into technical competency distributions across graduating batches.
-* **Cohort Filtering:** Filter candidate pools by academic year, degree specialization, and specific programming languages or frameworks.
-* **Early Warning System:** Proactively flag students lacking baseline project evidence or exhibiting critical skill deficits prior to campus recruitment seasons.
+### 2. Faculty Portal
+* **Departmental Analytics:** Real-time visibility into student skill distributions, average cohort readiness, and top technical strengths across batches.
+* **Student Monitoring:** Search and filter students by graduation year, degree specialization, and specific skills.
+* **At-Risk Identification:** Automatically highlights students who lack verified project work or exhibit critical skill gaps ahead of placement drives.
 
-### 💼 3. Recruiter Module
-* **Multi-Criteria Candidate Search:** Filter student profiles using granular criteria (skill tags, minimum proficiency thresholds, CGPA).
-* **Job Requisition Benchmarking:** Define technical benchmarks and custom skill weights for open hiring roles.
-* **Dual-Candidate AI Comparison:** Select any two candidate profiles for side-by-side vector comparison; the AI evaluates project depth, skill alignment, and GPA to deliver an objective hiring verdict.
-
----
-
-## 🛠️ Technology Stack
-
-| Layer | Technologies Used |
-| :--- | :--- |
-| **Frontend** | React 19, TypeScript, Vite 5, Tailwind CSS, Lucide Icons, Framer Motion |
-| **Backend & Storage** | Supabase (Managed PostgreSQL, PostgREST API, JWT Authentication) |
-| **Security** | PostgreSQL Row-Level Security (RLS) policies for complete role-based data isolation |
-| **AI Inference** | Groq Cloud API (Hardware-accelerated LPU inference engine with strict JSON schemas) |
-| **Deployment** | Vercel Serverless Edge Platform |
+### 3. Recruiter Portal
+* **Candidate Search:** Multi-parameter search by technical skills, minimum proficiency levels, semester cohort, and CGPA.
+* **Job Requisitions:** Define custom job requisitions with required skill benchmarks.
+* **Dual-Candidate AI Comparison:** Select any two candidates for side-by-side evaluation; the AI engine analyzes their verified proficiencies, project depth, and academic standing to deliver an objective hiring verdict.
 
 ---
 
-## 🏗️ System Architecture
+## Demo Credentials
+
+You can test the live application using the following pre-configured evaluation accounts:
+
+| Role | Email | Password | Access / Purpose |
+| :--- | :--- | :--- | :--- |
+| **Student** | `vamsi@student.com` | `Vamsi@1234` | Verified portfolio, AI gap analysis, roadmap tracker, ATS resume |
+| **Faculty** | `faculty@example.com` | `password123` | Department overview, cohort filters, at-risk student tracking |
+| **Recruiter** | `recruiter@example.com` | `password123` | Candidate search, job requisitions, side-by-side AI comparison |
+
+---
+
+## Architecture & Tech Stack
+
+SkillForge AI follows a decoupled three-tier architecture:
 
 ```
 ┌────────────────────────────────────────────────────────┐
-│                   Client Layer                         │
-│           React 19 + TypeScript + Vite                 │
-│      (Student / Faculty / Recruiter Dashboards)        │
+│                   Presentation Tier                    │
+│             React 19 + TypeScript + Vite               │
+│        (Student, Faculty & Recruiter Dashboards)       │
 └──────────────┬──────────────────────────┬──────────────┘
                │                          │
         JWT / REST API             LPU Inference
                │                          │
 ┌──────────────▼─────────────┐   ┌────────▼──────────────┐
-│       Database Layer       │   │   AI Intelligence     │
+│       Database Tier        │   │   AI Intelligence     │
 │    Supabase PostgreSQL     │   │    Groq Cloud API     │
-│   (Tables, RLS Policies)   │   │  (Llama-3.1 / GPT-OSS)│
+│   (Row-Level Security)     │   │  (Structured JSON)    │
 └────────────────────────────┘   └───────────────────────┘
+```
+
+* **Frontend:** React 19, TypeScript, Vite, Tailwind CSS, Lucide Icons, Framer Motion
+* **Backend & Database:** Supabase (PostgreSQL with Row-Level Security, JWT Auth, PostgREST)
+* **AI Inference:** Groq Cloud LPU inference API (low-latency structured JSON generation)
+* **Hosting:** Vercel Serverless Edge Platform
+
+---
+
+## Database Schema Overview
+
+* **`profiles`:** Stores user identity, assigned role (`student`, `faculty`, `recruiter`), full name, university, and contact links.
+* **`skills`:** Global catalog of standardized technical skills and domains.
+* **`user_skills`:** Junction table linking students to skills, storing proficiency level (0–100%) and verification status (`is_verified`).
+* **`projects`:** Stores student software projects, descriptions, GitHub repository URLs, and live deployment links.
+* **`job_requisitions`:** Recruiter job postings with required skill vectors and AI match thresholds.
+
+---
+
+## Local Development Setup
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/vboya4982-star/CAPSTONE.git
+cd CAPSTONE
+```
+
+### 2. Install dependencies
+```bash
+npm install
+```
+
+### 3. Environment Configuration
+Create a `.env` file in the root directory (refer to `.env.example`):
+```env
+VITE_SUPABASE_URL=your_supabase_project_url
+VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
+VITE_GROQ_API_KEY=your_groq_api_key
+```
+
+### 4. Run the development server
+```bash
+npm run dev
+```
+Open `http://localhost:5173` in your browser.
+
+### 5. Build for production
+```bash
+npm run build
 ```
 
 ---
 
-## 💻 Local Development Setup
+## Project Team & Academic Credits
 
-### Prerequisites
-* [Node.js](https://nodejs.org/) (version 18.0 or higher)
-* [npm](https://www.npmjs.com/) or [pnpm](https://pnpm.io/)
-* Git
+**Capstone Project Report**  
+Department of Computer Science and Engineering  
+School of Computing  
+Kalasalingam Academy of Research and Education, Krishnankoil, Tamil Nadu, India
 
-### Installation Steps
+* **B. Vamsi** (Reg. No: `99230040013`)
+* **M. Sumanth Reddy** (Reg. No: `99230040036`)
+* **K. Vamshi** (Reg. No: `99230040238`)
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/<your-username>/SkillForge-AI.git
-   cd SkillForge-AI
-   ```
-
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
-
-3. **Configure Environment Variables:**
-   Create a `.env` file in the project root directory and add your credentials:
-   ```env
-   VITE_SUPABASE_URL=your_supabase_project_url
-   VITE_SUPABASE_ANON_KEY=your_supabase_anon_key
-   VITE_GROQ_API_KEY=your_groq_api_key
-   ```
-
-4. **Start the local development server:**
-   ```bash
-   npm run dev
-   ```
-   Open `http://localhost:5173` in your browser.
-
-5. **Build for production:**
-   ```bash
-   npm run build
-   ```
-
----
-
-## 👥 Project Team & Academic Credits
-
-Developed as a **B.Tech Capstone Project** in the **Department of Computer Science and Engineering**, **School of Computing**, **Kalasalingam Academy of Research and Education**, Krishnankoil, Tamil Nadu, India.
-
-### 👨‍💻 Student Contributors
-* **B. Vamsi** – `99230040013`
-* **M. Sumanth Reddy** – `99230040036`
-* **K. Vamshi** – `99230040238`
-
-### 👩‍🏫 Project Supervisor
-* **Mrs. P. Kalaiarasi**, Assistant Professor  
-  *Department of Computer Science and Engineering*
-
----
-
-## 📄 License
-This project is developed for academic research and evaluation purposes.
+**Project Supervisor:** Mrs. P. Kalaiarasi, Assistant Professor
